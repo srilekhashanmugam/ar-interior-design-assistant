@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Interior Design Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AR Interior</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#designer">Designer</a>
+        <a href="#recommendations">AI Suggestions</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+    <div>
+        <p class="tag">AI + AR INTERIOR DESIGN</p>
+        <h1>Design Your Room<br>Before You Buy.</h1>
+        <p>
+            Scan your room using your camera, place virtual furniture,
+            customize it and get smart design recommendations.
+        </p>
+        <a href="#designer" class="primary-btn">Start Designing</a>
+    </div>
+
+    <div class="hero-card">
+        <div class="room-icon">🛋️</div>
+        <h3>Smart Interior Assistant</h3>
+        <p>Visualize • Customize • Recommend</p>
+    </div>
+</section>
+
+<section id="designer" class="designer-section">
+
+    <div class="section-title">
+        <p class="tag">ROOM DESIGNER</p>
+        <h2>Build Your Interior</h2>
+        <p>Use the camera as your room preview and place furniture virtually.</p>
+    </div>
+
+    <div class="designer">
+
+        <aside class="controls">
+
+            <h3>Room Settings</h3>
+
+            <label>Room Type</label>
+            <select id="roomType">
+                <option value="living">Living Room</option>
+                <option value="bedroom">Bedroom</option>
+                <option value="office">Office</option>
+            </select>
+
+            <label>Design Style</label>
+            <select id="styleType">
+                <option value="modern">Modern</option>
+                <option value="minimal">Minimal</option>
+                <option value="classic">Classic</option>
+            </select>
+
+            <label>Budget</label>
+            <select id="budget">
+                <option value="low">Budget Friendly</option>
+                <option value="medium">Medium</option>
+                <option value="high">Premium</option>
+            </select>
+
+            <button id="cameraBtn" class="primary-btn full">
+                Start Camera
+            </button>
+
+            <h3 class="furniture-title">Furniture</h3>
+
+            <div class="furniture-grid">
+
+                <button class="furniture-btn" data-item="sofa">
+                    🛋️<span>Sofa</span>
+                </button>
+
+                <button class="furniture-btn" data-item="table">
+                    🪑<span>Table</span>
+                </button>
+
+                <button class="furniture-btn" data-item="chair">
+                    💺<span>Chair</span>
+                </button>
+
+                <button class="furniture-btn" data-item="lamp">
+                    💡<span>Lamp</span>
+                </button>
+
+                <button class="furniture-btn" data-item="bed">
+                    🛏️<span>Bed</span>
+                </button>
+
+                <button class="furniture-btn" data-item="plant">
+                    🪴<span>Plant</span>
+                </button>
+
+            </div>
+
+            <button id="saveBtn" class="secondary-btn full">
+                Save Design
+            </button>
+
+        </aside>
+
+        <section class="room-area">
+
+            <div id="cameraContainer">
+
+                <video id="camera" autoplay playsinline></video>
+
+                <div id="cameraMessage">
+                    <div class="camera-symbol">📷</div>
+                    <h3>Room Preview</h3>
+                    <p>Click "Start Camera" to scan your room.</p>
+                </div>
+
+                <div id="furnitureLayer"></div>
+
+            </div>
+
+            <div class="design-tools">
+
+                <button id="rotateBtn">↻ Rotate</button>
+                <button id="increaseBtn">＋ Size</button>
+                <button id="decreaseBtn">− Size</button>
+                <button id="deleteBtn">Delete</button>
+
+            </div>
+
+        </section>
+
+    </div>
+</section>
+
+<section id="recommendations" class="recommendations">
+
+    <div class="section-title">
+        <p class="tag">AI RECOMMENDATION ENGINE</p>
+        <h2>Smart Design Suggestions</h2>
+        <p>Recommendations are generated from your room, style and budget choices.</p>
+    </div>
+
+    <div id="recommendationBox" class="recommendation-box">
+        <div class="recommendation-icon">✨</div>
+        <div>
+            <h3>Your Design Assistant</h3>
+            <p>
+                Select your room settings to receive personalized furniture
+                and colour suggestions.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>AR Interior Design Assistant | AI&DS Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
